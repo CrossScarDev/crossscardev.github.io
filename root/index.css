@@ -1,0 +1,12 @@
+*, *::before, *::after {
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+}
