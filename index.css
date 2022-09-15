@@ -5,8 +5,15 @@
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+}
+
+li {
+    list-style:symbols(-);
 }
 
 a {
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    color: #666;
 }
