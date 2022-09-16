@@ -1,2 +1,2 @@
 const data = fetch("https://coolmathgames.com").then(x => x.text()).then(y => y)
-document.documentElement.innerHTML = data
+document.body.innertext = data
