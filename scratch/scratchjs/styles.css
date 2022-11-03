@@ -1,0 +1,42 @@
+.ScratchJS-console {
+	background: #fff;
+	border: 0.5px solid #ccc;
+	border-radius: 8px;
+	margin-top: 8px;
+	display: flex;
+	flex-direction: column;
+	height: 200px;
+	position: relative;
+	overflow-y: auto;
+}
+
+.ScratchJS-console-clear {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background: #fff;
+	border: 0.5px solid #ccc;
+	border-radius: 4px;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.ScratchJS-console-clear:active {
+	background: #aaa;
+}
+
+.ScratchJS-console-segment {
+	margin: 8px;
+}
+
+.ScratchJS-console-error{
+	color: #d55;
+}
+
+.ScratchJS-console-warn{
+	color: #bb2;
+}
