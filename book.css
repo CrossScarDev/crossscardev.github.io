@@ -9,9 +9,3 @@ body {
 h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
-
-img {
-    position: absolute;
-    right: 25px;
-    bottom: 37.5px;
-}
