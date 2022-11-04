@@ -255,7 +255,11 @@ class ScratchJS {
 	}
 
 	extObj({ obj, key }) {
-		return JSON.parse(obj)[key]
+		try {
+			return JSON.parse(obj)[key]
+		} catch(e) {
+			this.console.error(e)
+		}
 	}
 
 	get console() {
