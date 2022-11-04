@@ -117,11 +117,26 @@ class ScratchJS {
 					}
 				},
 				{
-					"opcode": "extObj",
+					"opcode": "extObjName",
 					"blockType": "reporter",
 					"text": "Extract Object Value: Name: [name] Key: [key]",
 					"arguments": {
 						"name": {
+							"type": "string",
+							"defaultValue": "New_Object"
+						},
+						"key": {
+							"type": "string",
+							"defaultValue": "apple"
+						}
+					}
+				},
+				{
+					"opcode": "extObj",
+					"blockType": "reporter",
+					"text": "Extract Object Value: Object: [obj] Key: [key]",
+					"arguments": {
+						"obj": {
 							"type": "string",
 							"defaultValue": "New_Object"
 						},
@@ -235,8 +250,12 @@ class ScratchJS {
 		return eval(`Object.keys(this.${name}OBJ)[${key - 1}]`)
 	}
 
-	extObj({ name, key }) {
+	extObjName({ name, key }) {
 		return eval(`this.${name}OBJ.${key}`)
+	}
+
+	extObj({ obj, key }) {
+		return JSON.parse(obj)[key]
 	}
 
 	get console() {
