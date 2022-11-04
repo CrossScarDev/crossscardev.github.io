@@ -132,21 +132,6 @@ class ScratchJS {
 					}
 				},
 				{
-					"opcode": "extObj",
-					"blockType": "reporter",
-					"text": "Extract Object Value: Object: [obj] Key: [key]",
-					"arguments": {
-						"obj": {
-							"type": "string",
-							"defaultValue": "New_Object"
-						},
-						"key": {
-							"type": "string",
-							"defaultValue": "apple"
-						}
-					}
-				},
-				{
 					"opcode": "consoleLog",
 					"blockType": "command",
 					"text": "Write [txt] To Console",
@@ -252,14 +237,6 @@ class ScratchJS {
 
 	extObjName({ name, key }) {
 		return eval(`this.${name}OBJ.${key}`)
-	}
-
-	extObj({ obj, key }) {
-		try {
-			return JSON.parse(obj)[key]
-		} catch(e) {
-			this.console.error(e)
-		}
 	}
 
 	get console() {
