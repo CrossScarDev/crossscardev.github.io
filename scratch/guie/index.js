@@ -9,12 +9,16 @@ class exampleExtension {
             "name": "Example Extension",
             "blocks": [
                 {
-					"func": "testjs",
-                    "blockType": "button",
-                    "text": 'Example Button'
+                    "opcode": "call.example",
+                    "blockType": "command",
+                    "text": 'Example Block'
                 }
             ]
         }
+    }
+
+    example() {
+        console.log("example block ran")
     }
 }
 
