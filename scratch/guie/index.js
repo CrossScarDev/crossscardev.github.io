@@ -9,7 +9,7 @@ class exampleExtension {
             "name": "Example Extension",
             "blocks": [
                 {
-                    "opcode": "call.example",
+                    "opcode": "example",
                     "blockType": "command",
                     "text": 'Example Block'
                 }
@@ -22,4 +22,8 @@ class exampleExtension {
     }
 }
 
-module.exports = exampleExtension
+(function() {
+    var extensionInstance = new exampleExtension(window.vm.extensionManager.runtime)
+    var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
+    window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
+})()
