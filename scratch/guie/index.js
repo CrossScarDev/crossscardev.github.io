@@ -1,4 +1,4 @@
-class exampleExtension {
+class ExampleExtension {
     constructor(runtime) {
 
     }
@@ -22,8 +22,4 @@ class exampleExtension {
     }
 }
 
-(function() {
-    var extensionInstance = new exampleExtension(window.vm.extensionManager.runtime)
-    var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
-    window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
-})()
+module.exports = ExampleExtension
