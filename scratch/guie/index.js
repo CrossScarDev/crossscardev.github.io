@@ -1,6 +1,6 @@
 class ExampleExtension {
     constructor(runtime) {
-
+        console.log("Example Extension Loaded!")
     }
 
     getInfo() {
