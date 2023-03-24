@@ -11,18 +11,28 @@ function loadClient() {
             function(err) { console.error("Error loading GAPI client for API", err); });
 }
 
-function generateVideoElem(title, thumbnail, id) {
+function generateVideoElem(title, thumbnail, author, videoID) {
     const link = document.createElement("a");
-    link.href = `./watch/#${id}`;
+    link.href = `./watch/?v=${videoID}`;
     link.classList.add("video");
 
     const img = document.createElement("img");
     img.src = thumbnail.url;
 
-    const span = document.createElement("span");
-    span.textContent = title
 
-    link.append(img, span);
+    const spanGroup = document.createElement("div");
+    spanGroup.classList.add("span-group");
+
+    const titleSpan = document.createElement("span");
+    titleSpan.textContent = title
+
+    const authorSpan = document.createElement("span");
+    authorSpan.textContent = `By ${author}`;
+
+    spanGroup.append(titleSpan, authorSpan);
+
+
+    link.append(img, spanGroup);
     document.querySelector(".videos").append(link);
 }
 
@@ -52,7 +62,7 @@ function search(text) {
             }).then(videoWrapper => {
                 let video = videoWrapper.result.items[0].snippet;
                 console.log(video)
-                generateVideoElem(video.title, video.thumbnails.default, vID);
+                generateVideoElem(video.title, video.thumbnails.default, video.channelTitle, vID);
             });
         });
     }, err => {

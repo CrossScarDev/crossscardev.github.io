@@ -44,7 +44,14 @@
     max-width: 600px;
 }
 
-.video > span {
+.video > .span-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    width: 100%;
+}
+
+.video > .span-group > span {
     text-align: center;
     color: #333;
     width: 100%;
