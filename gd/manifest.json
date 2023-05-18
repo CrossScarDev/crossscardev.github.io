@@ -1,0 +1,16 @@
+{
+    "name": "Geometry Dash",
+    "short_name": "GD",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "./icon.png",
+            "type": "image/png",
+            "sizes": "720x720"
+        }
+    ]
+}
